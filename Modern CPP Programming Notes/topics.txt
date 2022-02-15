@@ -1,0 +1,232 @@
+TOPICS
+1. Introduction
+
+A Little History of C/C++ Programming Languages
+Areas of Application and Popularity
+C++ Philosophy
+Books and References
+The Course
+
+************************************
+
+2. Basic Concepts I - Fundamental Types
+
+Preparation: What compiler should I use?, What editor/IDE compiler should I use?, How to compile?
+Hello World: I/O Stream
+C++ Fundamental Types Overview: Arithmetic types, Non-standard arithmetic types, void type, Pointer type and nullptr
+Conversion Rules
+C++ Operators: Operators precedence, Prefix/Postfix increment/decrement, Assignment, Compound , and comma operators, Spaceship operator <=>
+Integral Data Types: Fixed width integers, When use signed/unsigned integer? Promotion, Truncation, Undefined behavior
+Floating-point Types and Arithmetic: Normal/Denormal values, Not a Number (NaN), Infinity, Properties
+Floating-point Issues: Floating-point comparison, Catastrophic cancellation
+
+************************************
+
+
+3. Basic Concepts II - Entities and Control Flow
+
+Enumerators
+struct, union, and Bitfield
+using, decltype, and auto
+Control Flow: if Statement, for Loop, switch, goto
+
+************************************
+
+
+4. Basic Concepts III - Memory Management
+
+Heap and Stack: Stack Memory, new, delete, Memory Leak
+Initialization: Variable initialization, Uniform initialization, Structure initialization, Fixed-size array initialization, Dynamic array initialization
+Pointers and References: Pointer, Address-of operator &, Reference
+const, constexpr, consteval, constinit
+Explicit Type Conversion: static_cast, const_cast, reinterpret_cast, Type punning
+sizeof Operator
+
+************************************
+
+
+5. Basic Concepts IV - Functions and Preprocessing
+
+Declaration and Definition
+Functions: Pass by-value, Pass by-pointer, Pass by-reference, Overloading, Default parameters, Attributes
+Function Objects and Lambda Expressions: Function pointer, Function object (or Functor), Capture list, Other features, Capture list and classes
+Preprocessing: Preprocessors, Common errors, Useful macro, Stringizing operator (#), #pragma and #error, Token-Pasting Operator (##), Variadic Macro
+************************************
+
+
+6. C++ Object Oriented Programming I
+
+C++ Classes
+Class Hierarchy: Access specifiers, Inheritance access specifiers
+Class Constructor: Default constructor, Initializer list, Uniform initialization, Delegate constructor, explicit keyword
+Copy Constructor
+Class Destructor
+Defaulted Members (= default)
+Class Keywords: this, static, const, mutable, using, friend, delete
+
+************************************
+
+7. C++ Object Oriented Programming II
+
+Polymorphism: virtual methods, Virtual table, override keyword, final keyword, Common errors, Pure virtual method, Abstract class and interface
+Inheritance Casting and Run-time Type Identification
+Operator Overloading: Overview, Subscript operator [], Comparison operator <, Spaceship operator <=> Function call operator (), Conversion operator T(), Increment and decrement operators ++/--, Assignment operator =, Stream operator <<, Operator Notes
+C++ Special Objects: Aggregate, Trivial class, Standard-layout class, Plain old data (POD), Hierarchy
+************************************
+
+8. C++ Templates and Meta-programming I
+
+Function Template: Overview, Template parameters, Template parameter - default value, Specialization, Overloading, auto deduction
+Compile-Time Utilities: static_assert, decltype Keyword, using Keyword
+Type Traits: Overview, Type traits library, Type manipulation, Type relation and transformation
+Template Parameters: Overview, Special cases
+
+
+************************************
+
+9. C++ Templates and Meta-programming II
+
+Class Template: Class specialization, Class + Function - specialization, friend keyword, Dependent names, Template variable
+Template Meta-Programming
+SFINAE: Substitution Failure Is Not An Error: Function SFINAE, Class SFINAE, Class + Function SFINAE
+Variadic Template: Folding Expression, Variadic Class Template
+
+
+************************************
+
+10. Translation Units
+
+Basic Concepts: Translation unit, Local and global scope, Linkage
+Storage Class and Duration: Storage duration, Storage class, static and extern keywords, Internal/External linkage examples, Linkage of const and constexpr, Static Initialization Order Fiasco
+Dealing with Multiple Translation Units: One Definition Rule (ODR), inline functions/variables, Class in multiple translation units, Global variable issues
+Function Template
+Class Template
+ORD and Undefined Behavior
+#include Issues: Forward declaration, Include guard, Circular dependencies, Common linking errors
+Namespace: Namespace functions vs. static methods, Namespace alias, Anonymous namespace, inline namespace
+How to Compile: Compile strategies, Deal with libraries, Build static/dynamic libraries, Find dynamic library dependencies, Analyze object/executable symbols
+
+
+************************************
+
+11. Code Conventions
+
+C++ Project Organization: Project directories, Project files, src/include directories
+Coding Styles and Conventions
+#include
+Macro and Preprocessing
+Namespace
+Variables
+Functions
+Structs and Classes
+Control Flow
+Modern C++ Features
+Maintainability
+Naming and Formatting
+Code Documentation
+
+************************************
+
+12. Ecosystem
+
+Debugging: Assertion, Execution debugging (gdb)
+Memory Debugging: valgrind, Stack protection
+Sanitizers: Address sanitizer, Leak sanitizer, Memory sanitizers, Undefined behavior sanitizer
+Debugging Summary
+Code Checking and Analysis: Compiler warnings, Static analyzers
+Code Testing: Unit test, Code coverage, Fuzz testing
+Code Quality: clang-tidy
+CMake: cmake and ctest
+Code Documentation: doxygen
+Code Statistics: Count lines of code, Cyclomatic complexity analyzer
+Other Tools: Code formatting - clang-format, Compiler Explorer, Code transformation - CppInsights, Code autocompletion - TabNine/Kite, Local code search - ripgrep, Code search engine - searchcode/grep.app, Code exploration - SourceTrail, Code benchmarking - Quick-Bench, Font for Coding
+
+************************************
+
+13. Utilities
+
+I/O Stream: Manipulator, ofstream/ifstream
+Math Libraries
+Strings: std::string, Conversion from/to numeric balues, std::string view, std::format
+Random Number: Basic Concepts, C++ <random>, Seed, PRNG period and quality, Distribution, Quasi-random
+Time Measuring: Wall-Clock time, User time, System time
+Std Template Classes: std::pair, std::tuple, std::variant, std::optional, std::any
+Filesystem Library: Query methods, Modify methods
+
+************************************
+
+14. Containers, Iterators, and Algorithms
+
+Containers and Iterators
+Sequence Containers: std::array, std::vector, std::list, std::deque, std::forward_list
+Associative Containers: std::set, std::map, std::multiset
+Container Adaptors: std::stack, std::queue, std::priority_queue
+View: std::span
+Implement a Custom Iterator: Semantic, Implement a simple Iterator
+Iterator Utility Methods: std::advance, std::next, std::prev, std::distance, Range access methods, Iterator traits
+Algorithms Library: std::find_if, std::sort, std::accumulate, std::generate, std::remove_if
+
+
+************************************
+
+15. Advanced Topics
+
+Move Semantic: lvalues and rvalues references, Move semantic, Compiler implicitly declared, std::move
+Universal Reference and Perfect Forwarding: Universal reference, Reference collapsing rules, Perfect forwarding
+Value Categories
+&, && Overloading - Ref-qualifiers
+Copy Elision and RVO
+Type Deduction: Pass by-reference, Pass by-pointer, Pass by-value
+const Correctness
+Undefined Behavior
+Error Handling: C++ Exceptions, Defining custom exceptions, noexcept keyword, Memory allocation issues, Alternative error handling approaches
+C++ Idioms: Rule of zero/three/five, Singleton, PIMPL, CRTP, Template Virtual Functions
+Smart pointers: std::unique_ptr, std::shared_ptr, std::weak_ptr
+Concurrency: Thread Methods, Mutex, Atomic, Task-based parallelism
+
+************************************
+
+16. Optimization I
+
+General Concepts: Asymptotic complexity, Optimization cycle, Ahmdal's Law, Throughput, Bandwidth, Latency, Performance Bounds, Arithmetic Intensity
+Basic Architecture Concepts: Instruction-level parallelism, Little’s Law, Data-level parallelism, thread-level parallelism, RISC, CISC Instruction sets
+I/O Operations: printf, Memory Mapped I/O, Speed up raw data loading
+Locality and Memory Access Patterns: Memory hierarchy, Memory locality, Internal structure alignment, External structure alignment
+Arithmetic: Data types, Operations, Conversion, Floating-point, Compiler intrinsic functions, Value in a Range, Lookup Table
+Control Flow: Loop hoisting, Loop unrolling, Branch hints, Recursion
+Functions: Function call cost, Argument passing, Function optimizations, Function inlining, Pointers Aliasing
+C++ Objects: C++ Objects Optimizations
+
+
+************************************
+
+17. Optimization II
+
+Compiler Optimizations: About the compiler, Architecture flags, Optimization flags, Help the Compiler to produce better code, Profile guided optimization (PGO)
+Compiler Transformation Techniques
+Libraries and Data Structures: External libraries, Std library
+Profiling: gprof, uftrace, callgrind, cachegrind, perf Linux profiler
+Performance Benchmarking: What to test?, Workload/Dataset quality, Cache behavior, Stable CPU performance, Program memory layout
+Parallel Computing: Concurrency vs. Parallelism, Performance scaling, Gustafson’s Law, Parallel programming languages
+
+
+************************************
+
+Roadmap
+Complete C++20 topics
+Software Design Chapter
+Build Aspects Chapter (e.g. reducing build time)
+Essential Tool
+Online compiler and execution: CompilerExplorer
+
+for code execution: [Add new..] -> [execution only]
+Reporting bugs and contributing
+If you find any typos, conceptual errors, or sections to improve, please report them by writing directly to me or by using the issue panel
+
+Author
+Federico Busato
+
+Nvidia Corporation fbusato@nvidia.com
+Dept. of Computer Science, University of Verona, Italy federico.busato@univr.it
+Twitter: twitter.com/fedebusato
+Linkedin: www.linkedin.com/in/federico-busato/

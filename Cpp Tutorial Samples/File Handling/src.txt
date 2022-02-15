@@ -1,0 +1,5 @@
+https://simplesnippets.tech/file-handling-in-cpp/
+
+
+
+https://www.geeksforgeeks.org/file-handling-c-classes/
