@@ -1,0 +1,8 @@
+https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c/
+
+
+
+In shallow copy, an object is created by simply copying the data of all variables of the original object.
+
+
+In Deep copy, an object is created by copying data of all variables and it also allocates similar memory resources with the same value to the object.

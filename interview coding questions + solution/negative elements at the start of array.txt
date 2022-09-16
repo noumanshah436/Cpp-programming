@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+void swap(int * a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// Put negative elements at the start and positive at end of array
+void rearrange(int arr[], int n)
+{
+    // The following few lines are
+    // similar to partition process
+    // of QuickSort. The idea is to
+    // consider 0 as pivot and
+    // divide the array around it.
+    int i = -1;
+    for (int j = 0; j < n; j++)
+    {
+        if (arr[j] < 0)
+        {
+            i++;
+            swap(&arr[i], &arr[j]);
+        }
+         
+    }
+}
+
+
+int main() {
+    int arr[5] = { 1, -1, 2, -2, 3 };
+    rearrange(arr, 5);
+    for (int a : arr) {
+        cout << a<<" ";
+    }
+    return 0;
+}

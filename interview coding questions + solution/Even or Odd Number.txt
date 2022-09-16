@@ -1,0 +1,64 @@
+//  https://www.geeksforgeeks.org/even-or-odd-without-using-condtional-statement/
+
+//  https://www.youtube.com/watch?v=4-AoNsgYJQ4
+
+
+
+
+****************************
+
+Even or Odd Number using Ternary Operator and without using Modular Division
+
+
+suppose the number is n .
+Basic math :   (n/2)*2  = n 
+
+cout <<   ( (n/2)*2 == n  ) ?  "even": "odd"
+
+
+****************************
+
+
+
+even-or-odd-without-using-condtional-statement
+
+1 method  )
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	char arr[2]  = { "Even", "Odd" };
+	int no;
+	cout << "Enter a number: ";
+	cin >> no;
+	cout << arr[no % 2];
+
+
+
+	getchar();
+	return 0;
+}
+
+
+2 method  )
+
+#include<stdio.h>
+int main()
+{
+	int no;
+	printf("Enter a no: ");
+	scanf("%d", &no);
+	(no & 1 && printf("odd"))|| printf("even");
+	return 0;
+}
+
+
+*********************************
+
+
+
+

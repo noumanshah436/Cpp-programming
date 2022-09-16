@@ -1,0 +1,20 @@
+     
+
+
+      void reverseLSLL_by_iteration() {   
+
+		Node<T>  *current, *prev, *next;
+		current = head;
+		prev = nullptr;
+		 
+		while (current != nullptr)
+		{
+			next = current->next;  // save next node address as we lost it when we set link
+			current->next = prev;
+			prev = current;
+			current = next;
+		}
+
+		head = prev;
+		 
+	}

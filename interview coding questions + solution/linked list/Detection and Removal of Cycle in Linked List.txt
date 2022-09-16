@@ -1,0 +1,77 @@
+
+
+
+// Function to identify a cycle in a linked list using
+
+
+
+https://www.youtube.com/watch?v=Fj1ywT9ETQk
+https://www.youtube.com/watch?v=Fj1ywT9ETQk
+
+
+
+Using Floyd’s Cycle Detection Algorithm
+
+
+// Floyd’s cycle detection algorithm
+Node* identifyCycle(Node* head)
+{
+    // take two pointers – `slow` and `fast`
+    Node *slow = head, *fast = head;
+ 
+    while (fast !=NULL && fast->next !=NULL )
+    {
+        // move slow by one pointer
+        slow = slow->next;
+ 
+        // move fast by two pointers
+        fast = fast->next->next;
+ 
+        // if they meet any node, the linked list contains a cycle
+        if (slow == fast) {
+            return slow;
+        }
+    }
+ 
+    // we reach here if the slow and fast pointer does not meet
+    return nullptr;
+}
+
+
+
+
+
+void removeCycle(node* head){
+    node* fast=head ;
+    node* slow=head ;
+    do  {
+	slow=slow->next ;
+        fast=fast->next->next ;        
+    } while(fast!=slow) ;         //   if there is a cycle both pointer will meet at some note
+
+    if(fast==head){             // for case : if cycle is at head
+        while(slow->next!=head)
+           { slow=slow->next ;  }
+        
+        slow->next=NULL ;
+        return ;
+    }
+
+    fast=head ;                    //  after meet slow=fast , we point fast to head and again iterating both pointer by 1 and when they become same this means here is the cycle start, so we point slow pointer to null                                           
+    while(fast->next  != s low->next){            
+        fast=fast->next ;
+        slow=slow->next ;
+    }
+    slow->next=NULL ;
+}
+
+
+
+
+
+
+
+
+
+
+

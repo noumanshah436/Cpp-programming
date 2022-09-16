@@ -1,0 +1,53 @@
+//  https://webrewrite.com/find-pairs-given-sum-sorted-array-java-code/
+// https://www.youtube.com/watch?v=8c-GO7gWXrs
+/*
+
+Find pairs with given sum in a sorted array.
+
+Given an array A of size N. Write a code to find all pairs in the array that sum to a number equal to K.
+ If no such pair exists then output will be –1.
+
+NOTE – The array elements are distinct and in a sorted order.
+
+For example –
+
+Input :
+
+arr[] = {1, 2, 3, 4, 5, 6, 7};
+sum = 9
+
+Output:
+
+Pairs with given sum 9 is
+
+Pair (2 , 7 )
+Pair (3 , 6 )
+Pair (4 , 5 )
+
+
+Find Pairs with Given Sum in a Sorted Array
+
+*/  *******************************
+
+
+
+
+  low = 0
+  high = length - 1;
+  
+  while(low < high) { 
+
+      if(  arr[low] + arr[high] > sum) {
+           high--; 
+      } 
+      else if (arr[low] + arr[high] < sum) {
+           low++;
+ 
+      } 
+      else if (arr[low] + arr[high] == sum) {
+ 
+          print value of arr[low] and arr[high]
+          low++;
+          high--;
+      }
+} 

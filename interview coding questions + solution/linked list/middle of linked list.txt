@@ -1,0 +1,43 @@
+
+/*How to Find Middle Element of a Linked List?
+Method 1: Finding middle element of a linked in two traversal
+
+i) Traverse a linked list and find the length of a linked list.
+ii) Once we know the length of a linked list. We can traverse again upto length/2 and print the value of a node present at mid position.
+
+
+
+Method 2: Find middle element in linked list in one pass using two pointers.
+
+i) Use two pointer slow and fast. Initialized both the pointers to the head of a linked list.
+ii) Move fast pointer by two step and slow pointer by one step in each iteration.
+iii) When fast pointer reaches at the end of a linked list, The slow pointer points to the middle element of a linked list.
+
+*/
+
+
+
+
+
+
+      //Middle of the Linked List LeetCode Solution
+
+
+      public ListNode middleNode(ListNode head) {
+        
+        /*
+           Declare two pointers and initialized with
+           head.
+        */
+        ListNode slow = head;
+        ListNode fast = head;
+ 
+        //Move fast pointers by 2 step and slow by 1
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+ 
+ 
+         return slow;
+      }
